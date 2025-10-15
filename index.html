@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juliana Torres Morales — Portafolio</title>
+    <meta name="description" content="Portafolio de Juliana Torres Morales, estudiante de Ingeniería de Software TdeA, enfocada en ciencia de datos, desarrollo y automatización." />
+
+    <!-- Fuente profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN (sin build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                900: '#0b1220', // azul muy oscuro
+                800: '#0f1a2f',
+                700: '#13203a',
+                600: '#1b2b4a'
+              },
+              accent: {
+                400: '#60a5fa', // celeste
+                500: '#38bdf8'
+              },
+              violet: {
+                500: '#8b5cf6',
+                600: '#7c3aed'
+              }
+            },
+            fontFamily: {
+              inter: ['Inter', 'system-ui', 'sans-serif'],
+              poppins: ['Poppins', 'Inter', 'system-ui', 'sans-serif']
+            },
+            boxShadow: {
+              soft: '0 10px 35px -10px rgba(56,189,248,0.25)',
+              card: '0 12px 30px -10px rgba(139,92,246,0.25)'
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-6px)' }
+              },
+              glow: {
+                '0%, 100%': { boxShadow: '0 0 0px rgba(139,92,246,0.0)' },
+                '50%': { boxShadow: '0 0 30px rgba(139,92,246,0.35)' }
+              }
+            },
+            animation: {
+              float: 'float 6s ease-in-out infinite',
+              glow: 'glow 3.5s ease-in-out infinite'
+            }
+          }
+        }
+      };
+    </script>
+
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body class="bg-primary-900 text-white font-inter antialiased selection:bg-violet-600/30 selection:text-white">
+    <!-- Background decorativo -->
+    <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-violet-600/30 blur-3xl"></div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 h-80 w-[48rem] bg-gradient-to-t from-accent-500/20 to-transparent blur-3xl"></div>
+      <div class="grid-pattern opacity-10"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-20 border-b border-white/5 backdrop-blur supports-[backdrop-filter]:bg-primary-900/60">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="#inicio" class="flex items-center gap-3">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent-500 to-violet-600 text-white font-bold">JT</span>
+          <span class="font-poppins text-sm tracking-wide text-white/90">Juliana Torres Morales</span>
+        </a>
+        <div class="hidden gap-6 md:flex text-sm text-white/80">
+          <a class="hover:text-white transition" href="#proyectos">Proyectos</a>
+          <a class="hover:text-white transition" href="#habilidades">Habilidades</a>
+          <a class="hover:text-white transition" href="#experiencia">Experiencia</a>
+          <a class="hover:text-white transition" href="#contacto">Contacto</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="#contacto" class="rounded-lg bg-gradient-to-r from-violet-600 to-accent-500 px-4 py-2 text-sm font-medium shadow-soft hover:opacity-95 transition">Contáctame</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="inicio" class="mx-auto max-w-6xl px-4">
+      <!-- Hero -->
+      <section class="relative grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
+        <div class="reveal">
+          <p class="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-accent-500">Ingeniería de Software · TdeA</p>
+          <h1 class="font-poppins text-3xl font-bold leading-tight md:text-5xl">
+            Transformo <span class="text-accent-500">datos</span> en decisiones y <span class="text-violet-500">procesos</span> en soluciones inteligentes.
+          </h1>
+          <p class="mt-5 max-w-xl text-white/70">
+            Soy Juliana Torres, estudiante de 8° semestre de Ingeniería de Software en el Tecnológico de Antioquia.
+            Apasionada por la ciencia de datos, el desarrollo de software y la automatización de procesos.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#proyectos" class="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-primary-900 shadow hover:shadow-lg transition">Ver proyectos</a>
+            <a href="#contacto" class="rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white hover:border-white/40 hover:bg-white/5 transition">Contáctame</a>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-sm reveal">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-accent-500 to-violet-600 opacity-60 blur-lg"></div>
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-primary-800/50 p-4 shadow-soft backdrop-blur">
+            <!-- Foto profesional -->
+            <img src="assets/images/juliana.jpg" alt="Foto profesional de Juliana Torres" class="mx-auto h-72 w-full rounded-xl object-cover object-center animate-float" />
+            <div class="mt-4 flex items-center justify-between text-xs text-white/70">
+              <span>Ciencia de Datos · RPA · Dev</span>
+              <span class="inline-flex items-center gap-1 rounded-md bg-white/5 px-2 py-1 text-[11px]">Disponible para prácticas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="py-16 md:py-20">
+        <div class="reveal">
+          <h2 class="font-poppins text-2xl font-semibold md:text-3xl">Sobre mí</h2>
+          <p class="mt-4 max-w-3xl text-white/80">
+            Estudiante de Ingeniería de Software (TdeA) con enfoque en analítica de datos, desarrollo y automatización. Mi formación combina fundamentos sólidos en ingeniería con experiencias en investigación aplicada y proyectos de impacto.
+          </p>
+          <ul class="mt-6 grid gap-3 text-white/80 md:grid-cols-2">
+            <li class="card-li">Semillero <strong>Data-Lab</strong>: “Explorando los datos, proyectando el futuro”.</li>
+            <li class="card-li">Grupo <strong>Automata (RPA)</strong>: automatización con Power Automate Desktop.</li>
+            <li class="card-li">Hackathons: <strong>ganadora</strong> con app móvil (React Native + Firebase).</li>
+            <li class="card-li">Metodologías de investigación, pensamiento sistémico e innovación.</li>
+          </ul>
+          <blockquote class="mt-8 rounded-xl border border-white/10 bg-white/5 p-5 text-white/90">
+            “Creo en la tecnología como puente entre la eficiencia y el bienestar humano. Cada línea de código que escribo busca simplificar procesos, optimizar decisiones y crear impacto real.”
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="proyectos" class="py-16 md:py-20">
+        <div class="reveal">
+          <div class="mb-8 flex items-end justify-between">
+            <div>
+              <h2 class="font-poppins text-2xl font-semibold md:text-3xl">Proyectos destacados</h2>
+              <p class="mt-2 text-white/70">Investigación, automatización y desarrollo aplicados a problemas reales.</p>
+            </div>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <!-- Gobernanza 4.0 -->
+            <article class="card">
+              <div class="card-top">
+                <span class="emoji">🧠</span>
+                <h3 class="card-title">Gobernanza 4.0</h3>
+                <p class="card-desc">Investigación sobre integración de IA, IoT y Big Data para desarrollo urbano inclusivo y toma de decisiones basada en evidencia.</p>
+              </div>
+              <div class="card-actions">
+                <a href="#" class="btn-secondary">Ver detalles</a>
+              </div>
+            </article>
+
+            <!-- Automatización RPA -->
+            <article class="card">
+              <div class="card-top">
+                <span class="emoji">🤖</span>
+                <h3 class="card-title">Automatización RPA con Power Automate Desktop</h3>
+                <p class="card-desc">Desarrollo de subflujos para procesamiento de Excel, carga en web forms, control de errores y robustez en la ejecución.</p>
+              </div>
+              <div class="card-actions">
+                <a href="#" class="btn-secondary">Ver detalles</a>
+              </div>
+            </article>
+
+            <!-- Dashboard análisis -->
+            <article class="card">
+              <div class="card-top">
+                <span class="emoji">📊</span>
+                <h3 class="card-title">Dashboard de análisis de desempeño</h3>
+                <p class="card-desc">Visualización con Power BI y Python, filtros avanzados, métricas clave y narrativa de datos para stakeholders.</p>
+              </div>
+              <div class="card-actions">
+                <a href="#" class="btn-secondary">Ver detalles</a>
+                <a href="#" class="btn-ghost">Ver en GitHub</a>
+              </div>
+            </article>
+
+            <!-- App móvil ganadora -->
+            <article class="card">
+              <div class="card-top">
+                <span class="emoji">📱</span>
+                <h3 class="card-title">App móvil ganadora (React Native + Firebase)</h3>
+                <p class="card-desc">Solución de participación ciudadana creada en hackathon. Autenticación, almacenamiento en la nube y notificaciones.</p>
+              </div>
+              <div class="card-actions">
+                <a href="#" class="btn-secondary">Ver detalles</a>
+                <a href="#" class="btn-ghost">Ver en GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <section id="habilidades" class="py-16 md:py-20">
+        <div class="reveal">
+          <h2 class="font-poppins text-2xl font-semibold md:text-3xl">Habilidades técnicas</h2>
+          <div class="mt-6 grid gap-6 md:grid-cols-3">
+            <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+              <h3 class="mb-3 text-sm font-semibold text-white/90">Lenguajes</h3>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span class="chip">Python</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">SQL</span>
+                <span class="chip">NoSQL</span>
+              </div>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+              <h3 class="mb-3 text-sm font-semibold text-white/90">Herramientas</h3>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span class="chip">Power BI</span>
+                <span class="chip">Power Automate</span>
+                <span class="chip">Excel avanzado</span>
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">VS Code</span>
+                <span class="chip">Google Cloud (básico)</span>
+              </div>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+              <h3 class="mb-3 text-sm font-semibold text-white/90">Competencias</h3>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span class="chip">Analítica de datos</span>
+                <span class="chip">Automatización de procesos</span>
+                <span class="chip">Desarrollo web y móvil</span>
+                <span class="chip">Investigación aplicada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencia y formación -->
+      <section id="experiencia" class="py-16 md:py-20">
+        <div class="reveal">
+          <h2 class="font-poppins text-2xl font-semibold md:text-3xl">Experiencia y formación</h2>
+          <ol class="mt-8 space-y-6 border-l border-white/10 pl-6">
+            <li class="timeline">
+              <div class="dot"></div>
+              <h3 class="timeline-title">Ingeniería de Software – Tecnológico de Antioquia (TdeA)</h3>
+              <p class="timeline-desc">Formación en fundamentos de software, arquitectura, bases de datos y prácticas de desarrollo.</p>
+            </li>
+            <li class="timeline">
+              <div class="dot"></div>
+              <h3 class="timeline-title">Semillero Data-Lab (IA y Big Data)</h3>
+              <p class="timeline-desc">Exploración de modelos, análisis de datos y proyectos de investigación aplicada.</p>
+            </li>
+            <li class="timeline">
+              <div class="dot"></div>
+              <h3 class="timeline-title">Grupo Automata (RPA)</h3>
+              <p class="timeline-desc">Automatización con Power Automate Desktop y buenas prácticas de orquestación.</p>
+            </li>
+            <li class="timeline">
+              <div class="dot"></div>
+              <h3 class="timeline-title">Hackathons de desarrollo e innovación</h3>
+              <p class="timeline-desc">Participación activa y proyectos premiados con enfoque social y ciudadano.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto" class="py-16 md:py-20">
+        <div class="reveal">
+          <div class="mb-8">
+            <h2 class="font-poppins text-2xl font-semibold md:text-3xl">Contacto</h2>
+            <p class="mt-2 text-white/70">¿Hablamos? Estoy abierta a oportunidades de prácticas en datos, desarrollo o automatización.</p>
+          </div>
+          <div class="grid gap-8 md:grid-cols-2">
+            <div class="space-y-4">
+              <a class="contact-item" href="mailto:julianatorresmorales@tdea.edu.co" target="_blank" rel="noopener">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <p class="font-medium">Email académico</p>
+                  <p class="text-white/70">julianatorresmorales@tdea.edu.co</p>
+                </div>
+              </a>
+              <a class="contact-item" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                <span class="contact-icon">💼</span>
+                <div>
+                  <p class="font-medium">LinkedIn</p>
+                  <p class="text-white/70">Agrega tu URL de LinkedIn</p>
+                </div>
+              </a>
+              <a class="contact-item" href="https://github.com/" target="_blank" rel="noopener">
+                <span class="contact-icon">🐙</span>
+                <div>
+                  <p class="font-medium">GitHub</p>
+                  <p class="text-white/70">Agrega tu usuario de GitHub</p>
+                </div>
+              </a>
+            </div>
+            <form id="contact-form" class="rounded-xl border border-white/10 bg-white/5 p-5">
+              <div class="grid gap-4">
+                <div>
+                  <label class="label" for="name">Nombre</label>
+                  <input id="name" name="name" type="text" class="input" placeholder="Tu nombre" required />
+                </div>
+                <div>
+                  <label class="label" for="email">Email</label>
+                  <input id="email" name="email" type="email" class="input" placeholder="tucorreo@dominio.com" required />
+                </div>
+                <div>
+                  <label class="label" for="message">Mensaje</label>
+                  <textarea id="message" name="message" rows="4" class="input min-h-[120px]" placeholder="Cuéntame sobre tu proyecto o vacante" required></textarea>
+                </div>
+                <div class="flex items-center gap-3">
+                  <button type="submit" class="btn-primary">Enviar</button>
+                  <p id="form-status" class="text-sm text-white/70"></p>
+                </div>
+              </div>
+              <!-- EmailJS (opcional): configura tus IDs en assets/js/main.js -->
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-6 text-center text-xs text-white/60">
+      <p>© <span id="year"></span> Juliana Torres Morales — Hecho con pasión por la tecnología.</p>
+    </footer>
+
+    <!-- Carga EmailJS opcional si lo habilitas en main.js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
+    <script src="assets/js/main.js"></script>
+  </body>
+  </html>
